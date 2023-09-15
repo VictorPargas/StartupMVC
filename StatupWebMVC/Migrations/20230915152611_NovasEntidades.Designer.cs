@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StatupWebMVC.Data;
 
@@ -10,9 +11,11 @@ using StatupWebMVC.Data;
 namespace StatupWebMVC.Migrations
 {
     [DbContext(typeof(StatupWebMVCContext))]
-    partial class StatupWebMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20230915152611_NovasEntidades")]
+    partial class NovasEntidades
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

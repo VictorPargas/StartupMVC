@@ -14,6 +14,8 @@ namespace StatupWebMVC.Data
         {
         }
 
-        public DbSet<StatupWebMVC.Models.Departamento> Departamento { get; set; } = default!;
+        public DbSet<Departamento> Departamento { get; set; } = default!;
+        public DbSet<Vendedores> Vendedores { get; set; }
+        public DbSet<RecordVenda> RecordVendas { get; set; }
     }
 }

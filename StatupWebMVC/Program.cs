@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using StatupWebMVC.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<StatupWebMVCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("StatupWebMVCContext") ?? throw new InvalidOperationException("Connection string 'StatupWebMVCContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
